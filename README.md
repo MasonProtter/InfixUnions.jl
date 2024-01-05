@@ -2,7 +2,7 @@
 
 InfixUnions defines 3 separate infix operators that can be used to define `Union` types: `|`, `∪`, and `∨`. 
 Since `|` and `∪` are defined and exported by `Base`, `InfixUnions` also defines a fallback method which forwards non-type
-arguments to the functions in `Base`. InfixUnions.jl does *not* 
+arguments to the functions in `Base`. InfixUnions.jl does *not* commit type piracy on these functions.
 
 In order to use `InfixUnions`, simply choose which operator you want with a `using` statement, and go:
 ``` julia
