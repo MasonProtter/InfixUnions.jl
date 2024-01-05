@@ -25,8 +25,10 @@ true
 
 ____________
 
+Similarly, one can use the `∪` operator (written by typing `\cup` and then hitting the `TAB` key) 
+
 ``` julia
-using InfixUnions: ∪
+using InfixUnions: ∪ 
 
 f(x::(Number ∪ Missing)) = 2x + 1
 ```
@@ -39,6 +41,8 @@ missing
 ```
 
 _____________
+
+And the `∨` operator (written by typing `\vee` and then hitting the `TAB` key) 
 
 ``` julia
 using InfixUnions: ∨
