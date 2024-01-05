@@ -1,6 +1,6 @@
 # InfixUnions.jl
 
-InfixUnions defines 3 separate infix operators that can be used to define `Union` types, `|`, `∪`, and `∨`. 
+InfixUnions defines 3 separate infix operators that can be used to define `Union` types: `|`, `∪`, and `∨`. 
 Since `|` and `∪` are defined and exported by `Base`, `InfixUnions` also defines a fallback method which forwards non-type
 arguments to the functions in `Base`. InfixUnions.jl does *not* 
 
