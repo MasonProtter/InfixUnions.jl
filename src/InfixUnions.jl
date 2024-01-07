@@ -5,7 +5,7 @@ for op ∈ (:|, :∪)
 end
 
 for op ∈ (:|, :∪, :∨)
-    @eval $op(typs::Type...) = Union{typs...}
+    @eval $op(typs::Union{Type, TypeVar}...) = Union{typs...}
 end
 
 """

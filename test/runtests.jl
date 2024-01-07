@@ -11,6 +11,9 @@ using InfixUnions: |, ∪, (∨)
         end
     end
 end
+
+
+
 @testset "Type Unions" begin
     for op ∈ (|, ∪, ∨)
         for T ∈ (Int, Matrix, Complex{Rational{Int}}, Any, Union{})
@@ -20,7 +23,18 @@ end
                 for V ∈ (Any, Union{}, Int, Rational)
                     @test op(T, U, V) == op(op(T, U), V) == Union{T, U, V}
                 end
+                
             end
         end
     end
+end
+
+struct MyType{T<:Number,AY<:(AbstractVector{T}|Nothing)}
+    y::AY
+    avg_y::(T|Nothing)
+end
+
+@testset "Typevars" begin
+    @test MyType{Int, Nothing}(nothing, nothing) isa MyType
+    @test MyType{Int, Vector{Int}}([1,2,3], 1) isa MyType
 end
