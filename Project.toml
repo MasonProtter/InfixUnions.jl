@@ -1,7 +1,7 @@
 name = "InfixUnions"
 uuid = "36bce8c7-4217-4a10-b989-c910c0ce2ba6"
 authors = ["Mason Protter <mason.protter@icloud.com>"]
-version = "0.1.0"
+version = "0.1.1"
 
 [compat]
 julia = "1"
